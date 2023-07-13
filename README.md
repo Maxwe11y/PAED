@@ -11,7 +11,7 @@
 </div>
 
 ## Overview
-🔥 &nbsp;This is a repository for our paper ([PAED: Zero-Shot Persona Attribute Extraction in Dialogues](/paper/PAED.pdf)) accepted in ACL'23 ([The 61st Annual Meeting of the Association for Computational Linguistics](https://2023.aclweb.org)).
+🔥 This is a repository for our paper ([PAED: Zero-Shot Persona Attribute Extraction in Dialogues](https://aclanthology.org/2023.acl-long.544.pdf)) accepted in ACL'23 ([The 61st Annual Meeting of the Association for Computational Linguistics](https://2023.aclweb.org)). (Author list: Luyao Zhu, Wei Li, Rui Mao, Vlad Pandelea and Erik Cambria.)
 >In this work, we develop a PAED dataset, PersonaExt, with 1,896 re-annotated triplets and 6,357 corrected utterance-triplet pairs. 
 >We present a generation-based framework for zero-shot PAED. A novel HNS strategy, Meta-VAE sampler with CSC, is presented to enhance the performance of our model.
 >Our model achieves better results than strong baselines in zero-shot PAED and negative sampling.
@@ -27,7 +27,7 @@ The dataset [PersonaExt](https://github.com/Cyn7hia/PAED/blob/main/data/ConvAI2/
 pip install -r requirements.txt
 ```
 
-## Uasge
+## Usage
 To run this code, please use the following command (take split `unseen_10_seed_0` as an example). 
 >10 is the number of unseen labels; 0 is the random seed used for randomly selecting the 10 unseen labels.
 
@@ -46,7 +46,7 @@ To change the random seeds for selecting the unseen labels, you may find the var
 >>>seeds=[1]
 ```
 
-The default evaluation is the results of single triplet extraction. To get the evaluation for multiple triplet extraction for other dataset, e.g., fewrel, you may set the flag `mode='multi'` of the function `run_eval`. Additionally, you need to remember to place the target dataset under the directory of `/outputs/data/splits/zero_rte/[YOURDATA]/unseen_[x]_seed_[x]/`, which should conver train.json, dev.json and test.json.
+The default evaluation is tailored for the results of single triplet extraction. To get the evaluation for multiple triplet extraction for other dataset, e.g., fewrel, you may set the flag `mode='multi'` of the function `run_eval`. Additionally, you need to remember to place the target dataset under the directory of `/outputs/data/splits/zero_rte/[YOURDATA]/unseen_[x]_seed_[x]/`, which should conver train.json, dev.json and test.json.
 
 ## Issues and Usage Q&A
 To ask questions, report issues or request features 🤔, please use the [GitHub Issue Tracker](https://github.com/Cyn7hia/PAED/issues). Before creating a new issue, please make sure to search for existing issues that may solve your problem.
@@ -54,11 +54,21 @@ To ask questions, report issues or request features 🤔, please use the [GitHub
 ## Citation
 Please cite as
 ```bibtex
-@inproceedings{zhu2023paed,
-  title = {PAED: Zero-Shot Persona Attribute Extraction in Dialogues},
-  author = {Zhu, Luyao and Li, Wei and Mao, Rui and Pandelea, Vlad and Cambria, Erik},
-  booktitle = {Proceedings of the Annual Meeting of the Association for Computational Linguistics},
-  year = {2023}
+
+@inproceedings{zhu-etal-2023-paed,
+    title = {{PAED}: Zero-Shot Persona Attribute Extraction in Dialogues},
+    author = {Zhu, Luyao  and
+      Li, Wei  and
+      Mao, Rui  and
+      Pandelea, Vlad  and
+      Cambria, Erik},
+    booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+    month = {jul},
+    year = {2023},
+    address = {Toronto, Canada},
+    publisher = {Association for Computational Linguistics},
+    url = {https://aclanthology.org/2023.acl-long.544},
+    pages = {9771--9787}
 }
 ```
 
